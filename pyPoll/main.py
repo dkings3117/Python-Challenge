@@ -15,19 +15,13 @@ with open(electionCSV, 'r') as csvfile:
 	for row in csvreader:
 		totalVotes += 1
 		candidate = row[2]
-		# if totalVotes <= 10:
-			# print(f"candidate: {candidate}")
-			# print (row)
 		if candidate not in candidates:
 			candidates.append(candidate)
 			numVotes.append(1)
 		else:
 			ind = candidates.index(candidate)
 			numVotes[ind] = numVotes[ind] + 1
-# print(candidates)
-# print(numVotes)
-# print(totalVotes)
-output_path = os.path.join("output.txt")
+output_path = os.path.join("output","output.txt")
 with open(output_path, 'w', newline='') as outfile:
 	csvwriter = csv.writer(outfile, delimiter=',')
 	writeToScreenAndFile(csvwriter, "Election Results")
