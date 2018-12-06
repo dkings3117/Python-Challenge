@@ -60,7 +60,7 @@ def writeToScreenAndFile(csvwriter, str):
 	print(str)
 	csvwriter.writerow([str])
 
-output_path = os.path.join("output.csv")
+output_path = os.path.join("output","output.csv")
 
 with open(employeeCSV, 'r') as csvfile:
 	csvreader = csv.reader(csvfile, delimiter=',')
