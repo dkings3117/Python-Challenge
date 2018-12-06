@@ -26,7 +26,7 @@ with open(bankCSV, 'r') as csvfile:
 			elif change < greatestDecrease:
 				greatestDecrease = change
 		lastMonthProfit = int(row[1])
-output_path = os.path.join("output.txt")
+output_path = os.path.join("output","output.txt")
 with open(output_path, 'w', newline='') as outfile:
 	csvwriter = csv.writer(outfile, delimiter=',')
 	writeToScreenAndFile(csvwriter, "Financial Analysis")
